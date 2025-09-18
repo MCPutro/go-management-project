@@ -1,0 +1,40 @@
+Application:
+  Port: 9999
+  Name: go-management-project
+  Database:
+    PostgresSql:
+      Name: postgres
+      FormatDNS: "user=%s password=%s host=%s port=%s dbname=%s sslmode=disable TimeZone=Asia/Jakarta"
+#      FormatDNS: "postgresql://%s:%s@%s:%s/%s"
+      Host: localhost
+      Port: 1124
+      DatabaseName: go-management
+      Username: postgres
+      Password: welcome1
+#      Parameters:
+#        sslmode: disable
+#        TimeZone: Asia/Jakarta
+#      NewParameters:
+#        - ParameterName: sslmode
+#          ParameterValue: disable
+#        - ParameterName: TimeZone
+#          ParameterValue:  Asia/Jakarta
+    MySql:
+      Name: mysql
+      FormatDNS: "%s:%s@tcp(%s:%s)/%s?parseTime=true&multiStatements=true"
+      Host: localhost
+      Port: 3306
+      DatabaseName: go_management_db
+      Username: root_username
+      Password: password
+#      Parameters:
+#        parseTime: "true"
+#        multiStatements: "true"
+#      NewParameters:
+#        - ParameterName: parseTime
+#          ParameterValue: "true"
+#        - ParameterName: multiStatements
+#          ParameterValue: "true"
+  Jwt:
+    Secret: your_jwt_secret_key
+    ExpirationInSecond: 3600

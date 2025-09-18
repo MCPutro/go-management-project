@@ -1,0 +1,25 @@
+Application:
+  Port: 9999
+  Name: go-management-project
+
+Database:
+  PostgresSQL:
+    Name: postgres
+    FormatDSN: "user=%s password=%s host=%s port=%s dbname=%s sslmode=disable TimeZone=Asia/Jakarta"
+    Host: localhost
+    Port: 1124
+    DatabaseName: go-management
+    Username: postgres
+    Password: welcome1
+  MySQL:
+    Name: mysql
+    FormatDSN: "%s:%s@tcp(%s:%s)/%s?parseTime=true&multiStatements=true"
+    Host: localhost
+    Port: 3306
+    DatabaseName: go_management_db
+    Username: root_username
+    Password: password
+
+Jwt:
+  SecretKey: your_jwt_secret_key
+  ExpirationInSecond: 3600
